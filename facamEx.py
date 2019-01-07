@@ -49,10 +49,10 @@
 #     print(dict_val[key])
 # for val in dict_val.values():
 #     print(val)
-dict_val = {"a":1,"b":2}
-for(key, val) in dict_val.items(): # 튜플로 반환
-    print(key)
-    print(val)
+# dict_val = {"a":1,"b":2}
+# for(key, val) in dict_val.items(): # 튜플로 반환
+#     print(key)
+#     print(val)
 
 # 반복문 while
 
