@@ -95,12 +95,9 @@
 # print(print_name(12,43))
 # print(print_name(14))
 
-#@__import__()
 
-#import turtle as tt
-#tt.s
 
-ㅇ
+
 
 
 
