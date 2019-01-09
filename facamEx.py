@@ -96,6 +96,40 @@
 # print(print_name(14))
 
 
+# # 함수의 활용
+# def send_mail(from_email, to_email, contents, subject="testSubject"):
+#     print(from_email)
+#     print(to_email)
+#     print(subject)
+#     print("*"*10)
+#     print(contents)
+#     print("*" * 10)
+#     print("-" * 10)
+#
+# users = []
+# users.append({'name':'kim','email':'kimyk@email.com'})
+# users.append({'name':'kim2','email':'kimyk2email.com'})
+#
+# # print(users)
+#
+# content = ''' test
+# test'''
+#
+# for user in users:
+#     title = "to " + user['name']
+#     if '@' not in user['email']:
+#         continue
+#     send_mail("me",user['email'],content)
+
+
+# 14. 내장함수
+
+
+
+
+
+
+
 
 
 
