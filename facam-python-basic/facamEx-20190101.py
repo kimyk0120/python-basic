@@ -220,18 +220,55 @@
 # test2.myData = 10
 # print(test2.myData)
 
+# __name__ 은 파이썬에서 기본적으로 만들어져 있음
+
 # class SimpleTest():
+#
+#     _test_data3 = 30
+#
+#     def __init__(self):
+#         self.testData = 10
+#         test_data2 = 20
+#         print("init called")
+#
 #     def print_skip(self,str):
 #         if 'skip' in str:
 #             print("skip")
 #             return
-#
 #         print(str)
+#
 #
 # simple = SimpleTest()
 # simple.print_skip("ddad")
 # simple.print_skip("skip text")
 # simple.print_skip("ssfsdf")
+
+
+# class SimpleTest2:
+#
+#     def __init__(self):
+#         self.prefix = "test1"
+#         self.postfix = "\n" + '- test2' + '\n'
+#         print("init called")
+#
+#     def print_fixes(self, my_name):
+#         print(my_name)
+#
+#
+# simple = SimpleTest2()
+# simple.print_fixes('kim')
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
