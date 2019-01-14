@@ -85,6 +85,35 @@
 # print(b) # a와 b가 같은 메모리 (1,2,3)을 참조하고 있다.
 
 
+# if 0:
+#     print("test1")
+# else:
+#     print("test2")
+
+# if 1 not in [2,3,4]:
+#     print("test1")
+# else:
+#     print("test2")
+
+# a = [1,2,3]
+# if 4 in a:
+#     pass
+# else:
+#     print(a[1:2])
+# if 1 in a: pass
+# else:print("test")
+
+# while문
+# hit =0
+# while hit < 10:
+#     hit+=1
+#     print("test" , "hit : " ,hit)
+
+# while 1:
+#     print("test")
+#     break
+
+
 
 
 
