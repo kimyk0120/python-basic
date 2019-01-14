@@ -186,7 +186,41 @@
 # a = {(1,2):'a'}
 # print(a[(1,2)])
 
+# a = {'a':1}
+# print(a['a'])
 
+# a = {'a':1, 'b':2, 'c':3, 'd':'test'}
+# print(a.keys())
+# for k in a.keys():
+#     print(k)
+#
+# print(list(a.keys()))
+# print(a.values())
+# print(a.items())
+# # a.clear()
+# # print(a)
+# print(a.get('a'))
+# print(a.get('noKey'))
+# #print(a['noKey']) #KeyError: 'noKey'
+# print(a.get('noKey','test'))
+#
+# b = 'd' in a
+# print(b)
+
+# 집합자료형
+# 교집합, 합집합, 차집합을 구할때 유용
+# 1. 중복을 허용하지 x 2. 순서가 없다 (unordered)
+# s1 = set([1,2,3])
+# print(s1)
+# s2 = set("test")
+# print(s2) #{'e', 's', 't'}
+# s1 = set([1,2,3])
+# s1.add(4)
+# print(s1)
+# s1.update([4,5,6])
+# print(s1)
+# s1.remove(4)
+# print(s1)
 
 
 
