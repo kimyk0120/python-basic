@@ -258,17 +258,13 @@
 # simple = SimpleTest2()
 # simple.print_fixes('kim')
 
-
-
-
-
-
-
-
-
-
-
-
+# class TestAutigen():
+#
+#     _test_var = 10
+#     test = 20
+#
+#     def __init__(self):
+#         print("test")
 
 
 
