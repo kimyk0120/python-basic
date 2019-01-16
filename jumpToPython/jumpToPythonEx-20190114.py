@@ -113,14 +113,37 @@
 #     print("test")
 #     break
 
-for i in range(2,10):
-    for j in range(1,10):
-        print(i*j, end=" ")
-    print("")
+# for i in range(2,10):
+#     for j in range(1,10):
+#         print(i*j, end=" ")
+#     print("")
 
+# a = [1,2,3,4]
+# result = []
+# for no in a:
+#     result.append(no*3)
+#
+# print(result)
 
+# a = [1,2,3,4]
+# result = [num * 3 for num in a if num %2 == 0]
+# print(result)
 
+# while q1
+# i = 0
+# while True:
+#     i += 1
+#     if i > 5 : break;
+#     print("*"*i)
 
+# for q1
+# a = [70,60,55,75,95,90,80,80,85,100]
+# total = 0;
+# for score in a:
+#     total += score
+# average = total / len(a)
+# # average = format(average,'.1f')
+# print(average)
 
 
 
