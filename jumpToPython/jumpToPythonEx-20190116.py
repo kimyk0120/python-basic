@@ -159,6 +159,16 @@
 # print(cal2.adder(4))
 
 
+'''
+class
+'''
+
+# class SimpleTest:
+#     pass
+#
+# simple = SimpleTest()
+
+
 
 
 
