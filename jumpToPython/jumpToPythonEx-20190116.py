@@ -159,14 +159,33 @@
 # print(cal2.adder(4))
 
 
+
 '''
-class
+    class
 '''
 
-# class SimpleTest:
-#     pass
-#
+
+class SimpleTest:
+    sc_key = "scKey"
+    # _sc_key = "scKey"
+    # def setName(self,name): # self 는 인스턴스 id와 동일하게 생각할 수 있다.
+    #     self.name = name
+
+    def __init__(self, name):
+        self.name = name
+
+    def sum(self,a,b): # self = 호출자의 식별
+        print(self.name, a+b)
+
+
 # simple = SimpleTest()
+simple = SimpleTest("test")
+# simple.setName("test")
+simple.sum(1,2)
+
+
+
+
 
 
 
