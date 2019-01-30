@@ -7,3 +7,34 @@
 # print(a,b,sep=".")
 # print(a,b,sep=" ")
 
+# print(1,2,3,sep="\n")
+
+# print(1,end="")
+# print(2,end="")
+# print(3)
+
+# 숫자 = 1
+# print(숫자)
+
+# a = 100_000
+# a = 100,000
+# print(a)
+
+# import numpy as np
+# a = np.array([[1,2,3],[4,5,6],[7,8,9]])
+# b = np.array([[1,2,3],[4,5,6],[7,8,9]])
+# print(a @ b)
+
+
+# print(1==1.0)
+# print(1 is 1.0)
+# print(1 is not 1.0)
+
+# print(id(1))
+# print(id(1.0))
+
+# print(not True)
+# print(not False)
+
+
+
