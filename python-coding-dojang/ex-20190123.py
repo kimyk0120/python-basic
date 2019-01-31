@@ -25,16 +25,31 @@
 # b = np.array([[1,2,3],[4,5,6],[7,8,9]])
 # print(a @ b)
 
-
 # print(1==1.0)
 # print(1 is 1.0)
 # print(1 is not 1.0)
+# print("test" is "test")
+# a = "test"
+# b = a
+# b = "test"
+# print(a is b)
 
 # print(id(1))
 # print(id(1.0))
 
 # print(not True)
 # print(not False)
+
+# c = list(range(5,10,3))
+# print(c)
+
+# a = 10, 20
+# print(a)
+
+
+
+
+
 
 
 
