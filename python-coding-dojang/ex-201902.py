@@ -23,3 +23,18 @@ print(a)
 # print(a[2:8:3])
 # print(a[2:9:3])
 
+# print(a[:7:2])
+
+# a[2:5] = ["a","b","c","d","e"]
+# print(a)
+
+# a[2:7:2] = ["tes1","test2","test3"]
+# print(a)
+
+# del(a[2:5])
+# del(a[2:8:2])
+# print(a)
+
+# del(a[len(a)-1])
+# print(a)
+
