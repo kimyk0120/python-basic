@@ -7,6 +7,7 @@ SMTP_PORT = 465
 SMTP_USER = "userEmail"
 SMTP_PASSWORD = "userPW"
 
+
 def send_mail(name, addr, subject , contents):
         msg = MIMEMultipart('alternative')
 
