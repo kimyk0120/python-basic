@@ -1,5 +1,5 @@
-a = list(range(0,100,10))
-print(a)
+# a = list(range(0,100,10))
+# print(a)
 
 # print(30 in a)
 # if 100 not in a: print("test")
@@ -37,4 +37,33 @@ print(a)
 
 # del(a[len(a)-1])
 # print(a)
+
+# dic_var = {"test1":1,"test2":"2"}
+# print(dic_var)
+
+# a = {}
+# print(a)
+
+# a = dict()
+# print(a)
+
+# a = dict(test1=490, test2="test", test3=18.72) # dict함수로 생성시 key 는 문자열로 변환됨
+# print(a)
+
+character = {"health":880, "name":"test", 'armor':18.72}
+character['health'] = 1000
+character['test2'] = "test2"
+print(character)
+# print(character["noKey"]) # keyErr
+print('test2' in character)
+
+
+
+
+
+
+
+
+
+
 
