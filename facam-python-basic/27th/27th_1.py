@@ -21,3 +21,20 @@ def send_mail(name, addr, subject , contents):
         msg['To'] = addr
         msg['Subject'] = name + '님,' + subject
 
+        text = MIMEText(contents, _charset='utf-8')
+        msg.attach(text)
+        # msg.attach(file)
+
+        smtp = smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT)
+        smtp.login(SMTP_USER, SMTP_PASSWORD)
+        smtp.sendmail(SMTP_USER, addr, msg.as_string())
+        smtp.close()
+
+
+if __name__ == "__main__":
+        contens = '''
+                자동화로 보내지는 메일입니다. 
+                이이이이이이ㅣ이
+                싸사사사
+        '''
+        send_mail("김영광","kimyk0120@gmail.com","자동화 메일입니다.", contens)
