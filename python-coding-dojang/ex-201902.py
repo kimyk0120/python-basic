@@ -107,7 +107,7 @@
 # for t in b:
 #     print(t)
 
-c = "python"
+# c = "python"
 # for i in c:
 #     print(i)
 
@@ -138,13 +138,44 @@ c = "python"
 #     print(i)
 #     i += 1
 
-import random
+# import random
 # print(random.randint(1, 6))
 
-i = 0
-while i != 3:
-    i = random.randint(1, 6)
-    print(i)
+# i = 0
+# while i != 3:
+#     i = random.randint(1, 6)
+#     print(i)
+
+
+# 20190220
+# q
+i = 2
+j = 5
+
+while i <= 32 or j > 0:
+    print(i, j, end=" ")
+    i *= 2
+    j -= 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
