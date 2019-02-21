@@ -107,7 +107,7 @@
 # for t in b:
 #     print(t)
 
-c = "python"
+# c = "python"
 # for i in c:
 #     print(i)
 
@@ -138,13 +138,152 @@ c = "python"
 #     print(i)
 #     i += 1
 
-import random
+# import random
 # print(random.randint(1, 6))
 
+# i = 0
+# while i != 3:
+#     i = random.randint(1, 6)
+#     print(i)
+
+
+# 20190220
+# q
+# i = 2
+# j = 5
+#
+# while i <= 32 or j > 0:
+#     print(i, j, end=" ")
+#     i *= 2
+#     j -= 1
+
+# q2
+# amount = int(input("amount : "))
+# fee = 1350
+# while amount > fee:
+#     amount -= fee
+#     print(amount)
+
+'''
+    break, continue
+'''
+
+# i = 0
+# while True:
+#     print(i)
+#     i += 1
+#     if i >= 100:
+#         break
+
+# for i in range(10):
+#     if i % 2 == 0:
+#         continue
+#     print(i)
+
+# q : 0과 73 사이의 숫자 중 3으로 끝나는 숫자만 출력
 i = 0
-while i != 3:
-    i = random.randint(1, 6)
-    print(i)
+# while True:
+#     if i % 10 != 3:
+#         i += 1
+#         continue
+#     if i > 73:
+#         break
+#     print(i, end=" ")
+#     i += 1
+
+# while True:
+#     if i % 10 == 3:
+#         print(i, end=" ")
+#         i += 1
+#     if i > 73:
+#         break
+#     i += 1
+
+
+# q : 두 수 사이의 숫자 중 3으로 끝나지 않는 숫자 출력
+# a = 1
+# b = 20
+#
+# i = a
+# while True:
+#     if i % 10 == 3:
+#         i += 1
+#         continue
+#     print(i)
+#     if i >= 20:
+#         break
+#     i += 1
+
+
+# 중첩 루프
+# for i in range(10):
+#     for j in range(10):
+#         print("j : ", j)
+#     print("\ti : ", i)
+
+# for i in range(5):
+#     for j in range(5):
+#         print("j:", j, sep="", end=" ")
+#     print("i:", i, '\\n', sep="")
+#     print("i:", i, sep="", end="\n")
+
+# for i in range(5):
+#     for j in range(5):
+#         print('*', end="")
+#     print()
+
+# for i in range(3):
+#     for j in range(7):
+#         print('*', end="")
+#     print()
+
+# for i in range(5):
+#     for j in range(5):
+#         if i >= j: # 0 0 , ... 1 0 , 1 1 ....
+#             print("*",end="")
+#     print()
+
+for i in range(5):
+    for j in range(5):
+        if j == i:
+            print("*", end='')
+        else:
+            print(' ',end='')
+    print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
