@@ -243,13 +243,71 @@ i = 0
 #             print("*",end="")
 #     print()
 
-for i in range(5):
-    for j in range(5):
-        if j == i:
-            print("*", end='')
-        else:
-            print(' ',end='')
-    print()
+# for i in range(5):
+#     for j in range(5):
+#         if j == i:
+#             print("*", end='')
+#         else:
+#             print(' ',end='')
+#     print()
+
+
+# 20190221
+# q : 역삼각형 별 출력
+
+# for i in range(5):
+#     for j in range(5):
+#         if j >= i:
+#             print("*", end='')
+#     print()
+
+# for i in range(5):
+#     for j in range(5):
+#         if j < i:  # 0 0, 1 0 ~~ 0 < 1
+#             print(" ", end='')
+#         else:
+#             print('*', end='')
+#     print()
+
+
+# 피라미드 별찍기
+# n = int(input('number :'))
+# for i in range(1, n+1):
+#     print(" "*(n-i), "*"*(2*i-1))
+
+# # FizzBuzz
+# for i in range(1, 101):
+#
+#     if i % 3 == 0:
+#         print('Fizz')
+#     elif i % 5 == 0:
+#         print('Buzz')
+#     else:
+#         print(i)
+
+
+# 공배수 처리
+# for i in range(1, 101):
+#
+#     if i % 3 == 0 and i % 5 ==0:
+#         print(i, 'FizzBuzz')
+#     elif i % 3 == 0:
+#         print(i, 'Fizz')
+#     elif i % 5 == 0:
+#         print(i, 'Buzz')
+#     else:
+#         print(i)
+
+# for i in range(1, 101):
+#
+#     if i % 15 == 0:  # 최소공배수
+#         print(i, 'FizzBuzz')
+#     elif i % 3 == 0:
+#         print(i, 'Fizz')
+#     elif i % 5 == 0:
+#         print(i, 'Buzz')
+#     else:
+#         print(i)
 
 
 
