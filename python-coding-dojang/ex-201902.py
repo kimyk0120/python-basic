@@ -181,7 +181,7 @@
 #     print(i)
 
 # q : 0과 73 사이의 숫자 중 3으로 끝나는 숫자만 출력
-i = 0
+# i = 0
 # while True:
 #     if i % 10 != 3:
 #         i += 1
@@ -308,6 +308,170 @@ i = 0
 #         print(i, 'Buzz')
 #     else:
 #         print(i)
+
+'''
+    20190224
+    list ~ 
+'''
+
+# append ..
+
+# a = [10, 20, 30]
+# a.append(500)
+
+# a = []
+# a.append(100)
+
+# a.append([500, 600])
+
+# print(a)
+# print(len(a))
+
+# extend
+#
+# a = [x for x in range(10, 31, 10)]
+# a.extend([500, 600])
+#
+#
+# print(a)
+
+# insert
+# a = [x for x in range(10, 31, 10)]
+# a.insert(2, 500) # index, el
+# a.insert(0, 500)
+# a.insert(len(a), 500)
+# a.insert(1, [500, 600])
+# a[1:1] = [500, 600]
+# print(a)
+
+# del
+# a = [x for x in range(10, 31, 10)]
+# b = a.pop(1)
+# print(b)
+# del a[1]
+# print(a)
+
+# remove
+# a = [x for x in range(10, 31, 10)]
+# a.remove(20)
+# print(a)
+
+# a = [10, 20, 30, 20]
+# a.remove(20)
+# print(a.index(20))
+
+# count
+# a = [10, 20, 30, 15, 20, 40]
+# b = a.count(20)
+# c = a.count(40)
+# print(b, c)
+
+# reverse, sort, clear
+# a = [10, 20, 30, 15, 20, 40]
+# a.reverse()
+# print(a)
+# a.sort()
+# print(a)
+# a.clear()
+# print(a)
+# del a[:]
+# print(a)
+
+# a = [10, 20, 30, 15, 20, 40]
+# a.sort()
+# print(a)
+# b = [10, 20, 30, 15, 20, 40]
+# c = sorted(b)
+# print(b)
+# print(c)
+
+# a = [x for x in range(10, 31, 10)]
+# a[len(a):] = [500]
+# print(a)
+# a[len(a):] = [500, 600]
+# print(a)
+
+# if a:
+#     print("test")
+# if len(a):
+#     print("test")
+
+
+a = [0, 0, 0, 0, 0]
+b = a
+print(a is b)
+print(a)
+print(b)
+
+b[0] = 99
+b[2] = 99
+print(a)
+print(b)
+print(id(a))
+print(id(b))
+
+a = [0, 0, 0, 0, 0]
+b = a.copy()
+print(a is b)
+b[2] = 88
+print(a)
+print(b)
+print(id(a))
+print(id(b))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
