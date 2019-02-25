@@ -3,5 +3,9 @@
 # smtp 서버 주소 : 메일 보내는 서버 주소
 # pop 서버 주소 : 메일 받는 서버 주소
 
+# OAuth2 : open api 서비스 인증
+pip install gspread
+pip install oauth2client
+
 
 

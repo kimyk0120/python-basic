@@ -62,3 +62,4 @@ if __name__ == "__main__":
             싸사사사
     '''
     send_mail("김영광","kimyk0120@gmail.com","자동화 메일입니다.", contens, 'test.txt')
+
