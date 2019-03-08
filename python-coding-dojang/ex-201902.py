@@ -397,27 +397,27 @@
 #     print("test")
 
 
-a = [0, 0, 0, 0, 0]
-b = a
-print(a is b)
-print(a)
-print(b)
-
-b[0] = 99
-b[2] = 99
-print(a)
-print(b)
-print(id(a))
-print(id(b))
-
-a = [0, 0, 0, 0, 0]
-b = a.copy()
-print(a is b)
-b[2] = 88
-print(a)
-print(b)
-print(id(a))
-print(id(b))
+# a = [0, 0, 0, 0, 0]
+# b = a
+# print(a is b)
+# print(a)
+# print(b)
+#
+# b[0] = 99
+# b[2] = 99
+# print(a)
+# print(b)
+# print(id(a))
+# print(id(b))
+#
+# a = [0, 0, 0, 0, 0]
+# b = a.copy()
+# print(a is b)
+# b[2] = 88
+# print(a)
+# print(b)
+# print(id(a))
+# print(id(b))
 
 
 
