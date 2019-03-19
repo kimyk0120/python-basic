@@ -107,6 +107,13 @@ print(a[0][1])
 from pprint import pprint
 pprint(a, indent=3, width=15)
 
+for x, y in a:
+    print(x, y)
+
+for i in a:
+    for j in i:
+        print(j, end=' ')
+
 
 
 
