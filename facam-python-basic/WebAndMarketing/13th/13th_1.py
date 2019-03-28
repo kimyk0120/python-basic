@@ -24,6 +24,32 @@ try:
         # print(idx, a.text)
         print(idx, a.get_attribute('title'), "/ href : ", a.get_attribute('href'))
 
+    print("-" * 30)
+
+    elem = driver.find_element_by_class_name('news')
+    # lis = elem.find_elements_by_tag_name('li')
+    lis = elem.find_elements_by_xpath('./ul/li')
+
+    for idx, li in enumerate(lis):
+        # print(li.text)
+        a = li.find_element_by_class_name('_sp_each_title')
+        print(idx, a.get_attribute('title'), "/ href : ", a.get_attribute('href'))
+
+    print("-" * 30)
+
+    elem = driver.find_element_by_class_name('cafe')
+    # lis = elem.find_elements_by_tag_name('li')
+    lis = elem.find_elements_by_xpath('./ul/li')
+
+    for idx, li in enumerate(lis):
+        # print(idx , li.text)
+        a = li.find_element_by_css_selector('dl dt a')
+
+        if not a.get_attribute('title'):
+            print(idx, a.text, "/ href : ", a.get_attribute('href'))
+        else:
+            print(idx, a.get_attribute('title'), "/ href : ", a.get_attribute('href'))
+
     # input()
 except Exception as e:
     print(e)
