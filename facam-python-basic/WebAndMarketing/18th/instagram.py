@@ -96,14 +96,17 @@ try:
         ac.click()
         ac.perform()
 
-        time.sleep(1)
+        time.sleep(2)
 
         # 좋아요 클릭
-        elem = d.find_element_by_class_name('fr66n')
-        ac.reset_actions()
-        ac.move_to_element(elem)
-        ac.click()
-        ac.perform()
+        try:
+            ac.reset_actions()
+            elem = d.find_element_by_class_name('fr66n')
+            ac.move_to_element(elem)
+            ac.click()
+            ac.perform()
+        except:
+            print("already clicked")
 
         time.sleep(1)
 
@@ -114,7 +117,7 @@ try:
 
         time.sleep(1)
 
-    input()
+    # input()
 except Exception as e:
     print(e)
 finally:
