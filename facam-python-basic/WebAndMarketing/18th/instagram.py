@@ -1,5 +1,7 @@
 '''
     인스타 로그인, 해시태그검색, 좋아요
+
+    셀렉터 사용시 class 속성값은 자주 바뀌는 경우가 많음 -> xPath 로 변경
 '''
 
 import time
@@ -59,7 +61,11 @@ try:
     # div 태그는 키를 받을 수 없는 태그다 (몰라도 된다!)
     # ActionChains 를 사용하는데, 마우스를 테스트할 수 있다
     # 가상의 마우스라고 생각하면 됨
-    elem = d.find_element_by_class_name('eyXLr')
+
+    # elem = d.find_element_by_class_name('eyXLr')
+    # xpath
+    elem = d.find_element_by_xpath("//span[text()='검색']/..")
+
     ac = ActionChains(d)
     # 위에서 찾은 태그위치로 마우스를 이동한다
     ac.move_to_element(elem)
@@ -85,8 +91,10 @@ try:
     time.sleep(5)
 
     # 게시글을 전부 가져온다
-    elem = d.find_element_by_class_name('EZdmt')
-    posts = elem.find_elements_by_class_name('v1Nh3')
+    # elem = d.find_element_by_class_name('EZdmt')
+    # posts = elem.find_elements_by_class_name('v1Nh3')
+    # xpath
+    posts = d.find_elements_by_xpath("//*[text()='인기 게시물']/../..//a[contains(@href,'')]/..")
     ac = ActionChains(d)
     for idx, post in enumerate(posts):
         print(idx)
@@ -99,14 +107,14 @@ try:
         time.sleep(2)
 
         # 좋아요 클릭
-        try:
-            ac.reset_actions()
-            elem = d.find_element_by_class_name('fr66n')
-            ac.move_to_element(elem)
-            ac.click()
-            ac.perform()
-        except:
-            print("already clicked")
+        ac.reset_actions()
+        # elem = d.find_element_by_class_name('fr66n')
+        # elem = d.find_element_by_xpath("//*[contains(@aria-label,'좋아요')]")
+        elem = d.find_element_by_xpath("//*[@aria-label='좋아요']")
+
+        ac.move_to_element(elem)
+        ac.click()
+        ac.perform()
 
         time.sleep(1)
 
