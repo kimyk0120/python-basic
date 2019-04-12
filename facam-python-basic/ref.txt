@@ -9,7 +9,7 @@ pip install oauth2client
 
 
 # python -> selenium -> chrome driver -> web
-# browser 없이 -> panthomJS
+# panthomJS
 
 
 
