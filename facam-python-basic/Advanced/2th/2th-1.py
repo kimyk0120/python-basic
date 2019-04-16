@@ -14,8 +14,6 @@ try:
         print(idx, name.text.replace('\n',' '))
         print("-"*10)
 
-
-
 except Exception as e:
     print(e)
 finally:
