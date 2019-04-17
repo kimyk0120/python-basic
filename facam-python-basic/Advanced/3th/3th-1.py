@@ -1,7 +1,11 @@
 from selenium import webdriver
-
+import datetime
+import os
 
 f = open("product.txt", 'r')
+
+# output = open('output.csv', 'w')
+output = open('output.csv', 'a')
 
 products = f.readlines() # 행 단위로 끊어서 list 형으로 반환
 
@@ -10,7 +14,8 @@ products = f.readlines() # 행 단위로 끊어서 list 형으로 반환
 driver = webdriver.Chrome("chromedriver")
 
 try:
-
+    header = ['']
+    data = [str(datetime.datetime.now())]
     for idx, url in enumerate(products):
         print(url)
         url = url.strip()
@@ -22,11 +27,19 @@ try:
         print("name : ", name)
 
         elem = driver.find_element_by_class_name("prdc_default_info")
-        price = elem.find_element_by_class_name("sale_price")
-        print("price : ", price.text)
-        break
+        elem = elem.find_element_by_class_name("sale_price")
+        price = elem.text
+        print("price : ", price)
+        header.append(name)
+        data.append(price.replace(",", ""))
 
+    # print(header)
+    if not os.path.exists('output.csv'):
+        output.write(','.join(header)+"\n")
 
+    output.write(",".join(data)+'\n')
+
+# .try
 except Exception as e:
     print(e)
 finally:
