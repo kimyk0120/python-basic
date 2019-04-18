@@ -11,7 +11,15 @@ pip install oauth2client
 # python -> selenium -> chrome driver -> web
 # panthomJS
 
+# selenium 크롬 headless 옵션
+options = webdriver.ChromeOptions()
+options.add_argument('headless')
+options.add_argument('window-size=1920x1080')
+options.add_argument("disable-gpu")
+# 혹은 options.add_argument("--disable-gpu")
 
+# pip3 install pyobjc > mac
+# pip3 install pyautogui
 
 
 

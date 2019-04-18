@@ -2,6 +2,13 @@ from selenium import webdriver
 import datetime
 import os
 
+# selenium 크롬 headless 옵션
+options = webdriver.ChromeOptions()
+options.add_argument('headless')
+options.add_argument('window-size=1920x1080')
+options.add_argument("disable-gpu")
+# 혹은 options.add_argument("--disable-gpu")
+
 f = open("product.txt", 'r')
 
 # output = open('output.csv', 'w')
@@ -11,7 +18,7 @@ products = f.readlines() # 행 단위로 끊어서 list 형으로 반환
 
 # print(products)
 
-driver = webdriver.Chrome("chromedriver")
+driver = webdriver.Chrome("chromedriver",options=options)
 
 try:
     header = ['']
@@ -38,10 +45,13 @@ try:
         output.write(','.join(header)+"\n")
 
     output.write(",".join(data)+'\n')
+    # .for
 
 # .try
 except Exception as e:
     print(e)
 finally:
     driver.quit()
+    output.close()
+    f.close()
 
