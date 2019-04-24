@@ -7,4 +7,5 @@ import time
 # 박스드래그 cmd + c , cmd + n 으로 해방 위치의 이미지를 추출
 # 이후 locateCenterOnScreen 함수를 이용하여 선택
 x, y = pyautogui.locateCenterOnScreen("ref.png")
-pyautogui.click(x, y)
+pyautogui.click(x, y) # 레티나 디스플레이 경우 >  (x/2, y/2)
+
