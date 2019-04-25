@@ -21,6 +21,19 @@ kakao = subprocess.Popen(['open', '-a', 'kakaotalk'])
 # pyautogui.typewrite(myPw)
 
 
+time.sleep(1)
+
+x, y = pyautogui.locateCenterOnScreen('profile.png') # 맥 사용자는 x, y 에 2를 나눠야함
+
+pyautogui.moveTo(x, y)
+pyautogui.doubleClick(1600, 303)
+
+time.sleep(0.5)
+pyautogui.typewrite("Test Message")
+pyautogui.press("enter")
+
+
+
 
 
 
