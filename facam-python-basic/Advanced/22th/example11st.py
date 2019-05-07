@@ -29,7 +29,7 @@ def do_auto(tid="testID"):
 
     print(prices)
     # print(products)
-
+    output = open('output.csv', 'a')
     driver = webdriver.Chrome("chromedriver",options=options)
 
     try:

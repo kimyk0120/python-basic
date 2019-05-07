@@ -47,7 +47,6 @@ class GUIT():
         self.tkhandler.mainloop()
 
 
-
 g = GUIT()
 g.run()
 
