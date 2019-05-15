@@ -438,4 +438,106 @@ for i in two_gram:
 [('a', 'd'), ('b', 'e'), ('c', 'f')]
 '''
 text = 'this is python script'
+words = text.split()
+print(words)
+a = list(zip(words, words[1:]))
+print(a)
 
+text = 'level'
+print(list(zip(*[text[i:] for i in range(3)])))
+
+
+''' 함수 '''
+
+
+def add_sub(a, b):
+    return a + b, a - b
+
+
+x, y = add_sub(10, 2)
+print(x)
+print(y)
+print(type(x))
+x = add_sub(10, 2)
+print(x)
+print(type(x))
+
+linn_sef()
+x = [10, 20, 30]
+
+
+def print_numbers(a, b, c):
+    print(a, b, c)
+
+
+# unpacking
+print_numbers(*x)
+print(*x)
+
+print(words)
+print(*words)
+
+print_numbers(*[10,20,30])
+# print_numbers(*[10,20])
+linn_sef()
+
+
+# variable arguments
+def print_numbers(*args):
+    for arg in args:
+        print(arg)
+
+
+print_numbers(11)
+print_numbers(10, 20, 30, 40)
+linn_sef()
+x = [10]
+y = [10, 20, 30, 40]
+print_numbers(*x)
+print_numbers(*y)
+
+
+def p_info(n, a, add):
+    print(n, a, add)
+
+
+p_info(a=12, n='kyk', add='kor')
+p_info(add='kor', a=12, n='kyk')
+
+x = {'add': 'kor', 'n': 'kyk', 'a': 13}
+# print(x)
+p_info(*x)  # key
+p_info(**x)
+
+
+def p_info2(**kwargs):
+    if 'name' in kwargs:
+        print("name in")
+    for kw, arg in kwargs.items():
+        print(kw, arg, sep=',')
+
+
+p_info2(**x)
+linn_sef()
+p_info2(name='kim')
+p_info2(name='kim', age=12)
+
+
+'''recursion'''
+
+
+# def recursion_say():
+#     print("recursion")
+#     recursion_say()
+
+# recursion_say()
+linn_sef()
+
+
+def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n-1)
+
+
+print(factorial(5))
