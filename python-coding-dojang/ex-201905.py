@@ -541,3 +541,25 @@ def factorial(n):
 
 
 print(factorial(5))
+
+linn_sef()
+
+
+''' lambda '''
+
+
+def plus_ten(x):
+    return x + 10
+
+
+print(plus_ten(2))
+
+print(lambda x: x + 10)  # <function <lambda> at 0x104fbc620>
+a = lambda x: x + 10
+print(a(3))
+print((lambda x: x + 10)(5))
+
+print(list(map(plus_ten, [1, 2, 3])))
+print(list(map(lambda x: x+10, [1, 2, 3])))
+
+
