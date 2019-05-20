@@ -125,6 +125,8 @@ def calc():
 
 c = calc()
 print(c(2))
+line_separate()
+
 
 
 ''' class'''
@@ -132,10 +134,10 @@ print(c(2))
 
 class Person:
     def __init__(self):
-        pass
+        self.hello = 'hello'
 
     def print_greeting(self):
-        print('hello')
+        print(self.hello)
 
 
 lbj = Person()
