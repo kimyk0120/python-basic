@@ -46,14 +46,12 @@ def f(x):
     return 5 < x < 10
 
 
-a = [i for i in range(1,11)]
+a = [i for i in range(1, 11)]
 print(a)
 print(list(filter(f, a)))
 print(list(filter(lambda x: 5 < x < 10, a)))
 
-
 line_separate()
-
 
 ''' closure '''
 
@@ -69,12 +67,12 @@ def foo():
 foo()
 print(x)
 
-
 line_separate()
 
 
 def A():
     x = 10
+
     def B():
         nonlocal x
         x = 20
@@ -97,7 +95,6 @@ while True:
     if len(a) == 10:
         break
 
-
 print(len(a))
 print(a)
 
@@ -109,7 +106,8 @@ def calc():
     b = 5
 
     def mul_add(x):
-        return a * x +b
+        return a * x + b
+
     return mul_add
 
 
@@ -127,8 +125,6 @@ c = calc()
 print(c(2))
 line_separate()
 
-
-
 ''' class'''
 
 
@@ -142,4 +138,49 @@ class Person:
 
 lbj = Person()
 lbj.print_greeting()
+line_separate()
+
+
+class Person:
+    def __init__(self, nm, age, addr):
+        self.hello = 'hello'
+        self.nm = nm
+        self.age = age
+        self.addr = addr
+
+    def print_greeting(self):
+        print('{0}, {1}'.format(self.hello, self.nm))
+
+
+person = Person('kim', 12, 'kor')
+person.print_greeting()
+print(person.nm)
+print(person.age)
+print(person.addr)
+line_separate()
+
+
+class Person:
+    def __init__(self, nm, age, addr, wallet):
+        self.hello = 'hello'
+        self.nm = nm
+        self.age = age
+        self.addr = addr
+        self.__wallet = wallet
+
+    def pay(self, amount):
+        if amount > self.__wallet:
+            print('insufficient')
+            return
+        self.__wallet -= amount
+        print('{0} left'.format(self.__wallet))
+
+
+person = Person('kim', 12, 'kor', 2000)
+person.pay(300)
+line_separate()
+
+
+
+
 
