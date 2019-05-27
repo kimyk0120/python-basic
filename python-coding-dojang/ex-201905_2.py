@@ -181,6 +181,93 @@ person.pay(300)
 line_separate()
 
 
+class Person:
+    bag = []
 
+    def put_bag(self, stuff):
+        self.bag.append(stuff)
+
+
+james = Person()
+james.put_bag('book')
+
+maria = Person()
+maria.put_bag('key')
+
+print(james.bag)
+print(maria.bag)
+line_separate()
+
+
+class Person:
+    def __init__(self):
+        self.bag = []
+
+    def put_bag(self, stuff):
+        self.bag.append(stuff)
+
+
+james = Person()
+james.put_bag('book')
+
+maria = Person()
+maria.put_bag('key')
+
+print(james.bag)
+print(maria.bag)
+line_separate()
+
+
+class Person:
+    __bag = []
+
+    def put_bag(self, stuff):
+        self.bag.append(stuff)
+
+
+class Calc:
+    @staticmethod
+    def add(a, b):
+        print(a + b)
+
+
+Calc.add(1, 2)
+
+
+class Person:
+    count = 0
+
+    def __init__(self):
+        Person.count += 1
+
+    @classmethod
+    def print_count(cls):
+        print('{0}명 생성'.format(cls.count))
+
+
+james = Person()
+maria = Person()
+
+Person.print_count()
+
+line_separate()
+
+
+class Date:
+    @staticmethod
+    def is_date_valid(date_string):
+        # print(date_string.split('-'))
+        # print(list(map(int, date_string.split('-'))))
+        year, month, day = map(int, date_string.split('-'))
+        # print(year)
+        # print(month)
+        # print(day)
+        return month <= 12 and day <= 31
+
+
+if Date.is_date_valid("2019-05-21"):
+    print("valid")
+else:
+    print("invalid")
 
 
