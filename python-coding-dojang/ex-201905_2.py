@@ -270,4 +270,29 @@ if Date.is_date_valid("2019-05-21"):
 else:
     print("invalid")
 
+line_separate()
+
+''' 상속 '''
+
+
+class Person:
+    def greeting(self):
+        print("hello")
+
+
+class Student(Person):
+    def study(self):
+        print("study")
+
+
+james = Student()
+james.greeting()
+james.study()
+
+print(issubclass(Student,Person))
+
+
+
+
+
 
