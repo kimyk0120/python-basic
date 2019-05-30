@@ -292,7 +292,64 @@ james.study()
 print(issubclass(Student,Person))
 
 
+line_separate()
+
+class Person():
+    def __init__(self):
+        print("Person init")
+        self.hello = "hello"
+
+class Student(Person):
+    def __init__(self):
+        print("Student init")
+        super().__init__()
+        self.school = "python"
+
+james = Student()
+print(james.school)
+print(james.hello)
+
+line_separate()
+
+''' overriding '''
+
+class Person:
+    def greeting(self):
+        print("hello")
+
+class Student(Person):
+    def greeting(self):
+        print("study")
 
 
+james = Student()
+james.greeting()
+line_separate()
 
+
+''' abstract class'''
+
+from abc import *
+
+
+class StudentBase(metaclass=ABCMeta):
+    @abstractmethod
+    def study(self):
+        pass
+
+    @abstractmethod
+    def go_to_school(self):
+        pass
+
+
+class Student(StudentBase):
+    def study(self):
+        print("study")
+
+    def go_to_school(self):
+        print("goToSchool")
+
+
+james = Student()
+james.study()
 
