@@ -353,3 +353,32 @@ class Student(StudentBase):
 james = Student()
 james.study()
 
+
+line_separate()
+
+import math
+
+class Pointt2D:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+
+p1 = Pointt2D(x=30, y=20)
+p2 = Pointt2D(x=60, y=50)
+
+print('p1 : {} {}'.format(p1.x, p1.y))
+print('p2 : {} {}'.format(p2.x, p2.y))
+
+a = p2.x - p1.x
+b = p2.y - p1.y
+
+# c = math.sqrt((a * a) + (b * b))
+# c = math.sqrt(math.pow(a, 2) + math.pow(b, 2))
+c = math.sqrt((a ** 2) + (b ** 2))
+print(c)
+
+
+
+
+
