@@ -72,3 +72,60 @@ line_separate()
 ''' extend Exception '''
 
 
+# class NotThreeMultipleError(Exception):
+#     def __init__(self):
+#         super().__init__('not 3 multiple')
+#
+#
+# def three_multiple():
+#     try:
+#         x = int(input('\n : '))
+#         if x % 3 != 0:
+#             raise NotThreeMultipleError
+#         print(x)
+#     except Exception as e:
+#         print("Exception : ", e)
+#
+#
+# three_multiple()
+
+
+''' iterator '''
+
+print(dir([1,2,3]))
+print([1,2,3].__iter__())
+
+it = [1,2,3].__iter__()
+print(it.__next__())
+print(it.__next__())
+print(it.__next__())
+# print(it.__next__()) #  StopIteration
+
+line_separate()
+
+
+class Counter:
+    def __init__(self, stop):
+        self.current = 0
+        self.stop = stop
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.current < self.stop:
+            r = self.current
+            self.current += 1
+            return r
+        else:
+            raise StopIteration
+
+
+for i in Counter(3):
+    print(i, end=' ')
+
+
+
+
+
+
