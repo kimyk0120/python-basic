@@ -240,4 +240,72 @@ print(re.match('(hi){1}','hhhi'))  # None
 print(re.match('(hh){1}','hhhi'))
 print(re.match('(hi){3}','hhhi'))  # None
 
+line_separate()
+print(re.match('[0-9]{3}-[0-9]{4}-[0-9]{4}', '010-0000-0000'))
+print(re.match('[0-9]{3}-[0-9]{4}-[0-9]{4}', '010-0000-000'))  # None
+print(re.match('[0-9]{2,3}-[0-9]{3,4}-[0-9]{3,4}', '010-0000-0000'))
+print(re.match('[0-9]{2,3}-[0-9]{3,4}-[0-9]{3,4}', '010-00-0000'))  # None
 
+line_separate()
+print(re.match('[a-zA-Z0-9]+', 'Hello1234'))
+print(re.match('[A-Z0-9]+', 'hello'))  # None
+
+# Not
+line_separate()
+print(re.match('[^A-Z]+', 'Hello'))  # None
+print(re.match('[^A-Z]+', 'hello'))
+
+# 범위로 시작하는지
+line_separate()
+print(re.search('^[A-Z]+', 'Hello'))
+print(re.search('^[A-Z]+', 'hello'))  # None
+# 범위로 끝나는지
+print(re.search('[0-9]+$', 'hello1234'))
+print(re.search('[0-9]+$', 'hello'))  # None
+
+'''
+    re.match()와 re.search()의 차이
+    re.match()의 경우 대상 문자열의 시작부터 검색을 하지만,
+    re.search()함수는 대상 문자열 전체에 대해서 검색을 수행한다.
+'''
+
+line_separate()
+print(re.search('\*+', '1 ** 2'))
+print(re.search('\*+', '1  2'))  # None
+print(re.match('[$()a-zA-Z0-9]+', '$(document)'))
+
+# \d = [0-9]
+# \D = [^0-9]
+# \w = [a-zA-Z0-9]
+# \W = [^a-zA-Z0-9]
+
+line_separate()
+print(re.match('\d', '1234'))
+print(re.match('\D', 'he'))
+print(re.match('\w+', 'he_1234'))
+print(re.match('\W+', '(:)'))
+
+# \s = 공백
+line_separate()
+print(re.match('[a-zA-Z0-9 ]+', 'Hello 1234'))
+print(re.match('[a-zA-Z0-9\s]+', 'Hello 1234'))
+
+print(re.findall('[0-9]+', '1 2 fii fii 4 fii5 89'))
+
+print(re.sub('apple|orange', 'fruit', 'apple box orange tree'))
+print(re.sub('[0-9]+', 'n', '1 2 fizz buzz 4 buzz 45'))
+
+line_separate()
+
+
+import math
+print(math.pi)
+
+line_separate()
+# import urllib.request
+# response = urllib.request.urlopen('http://www.google.co.kr')
+
+
+import requests
+r = requests.get('http://www.google.com')
+print(r.status_code)
