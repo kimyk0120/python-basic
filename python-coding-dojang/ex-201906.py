@@ -309,3 +309,39 @@ line_separate()
 import requests
 r = requests.get('http://www.google.com')
 print(r.status_code)
+
+
+
+'''
+    module
+'''
+
+line_separate()
+import calc
+print(calc.add(50, 100))
+print(calc.mul(50, 100))
+
+
+line_separate()
+
+# import calcpkg.operation
+# import calcpkg.geometry
+#
+# print(calcpkg.operation.add(10, 20))
+# print(calcpkg.geometry.rectangle_area(30, 40))
+
+# from calcpkg.operation import add, mul
+# from calcpkg.geometry import rectangle_area, triangle_area
+#
+# print(mul(10, 20))
+# print(triangle_area(10, 20))
+#
+# import sys
+# print(sys.path)
+
+import calcpkg
+
+print(calcpkg.operation.add(10, 20))
+print(calcpkg.geometry.triangle_area(10, 20))
+
+
